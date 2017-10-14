@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Survey Questions</h1>	
+		<hr>
+		<h3>About You</h3>
+		<div class="form-group">
+			<label for="Name">Name (Required)</label>
+			<input type="text" class='form-control' id='name' placeholder="Chuck Norris">
+		</div>
+		<div class="form-group">
+			<label for="image">Link to Photo Image (Required)</label>
+			<input type="text" class='form-control' id='image' placeholder="https://static.comicvine.com/uploads/original/3/31265/1550715-chuck_norris_2.jpg">
+		</div>
+		<hr>
+		<h3>Question 1</h3>
+		<h4>Your mind is always buzzing with unexplored ideas.</h4>
+		<div class="form-group">
+			<select name="quest1" id="quest1">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 2</h3>
+		<h4>Your mind is always buzzing with unexplored ideas.</h4>
+		<div class="form-group">
+			<select name="quest2" id="quest2">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 3</h3>
+		<h4>Your mind is always buzzing with unexplored ideas.</h4>
+		<div class="form-group">
+			<select name="quest3" id="quest3">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 4</h3>
+		<h4>Your mind is always buzzing with unexplored ideas.</h4>
+		<div class="form-group">
+			<select name="quest4" id="quest4">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="btn btn-primary btn-block" id="submit"><span class="glyphicon glyphicon-check"></span> Find a friend</div>
+		<hr>
+		<div>
+			<a href="/api/list">API Friends List</a>
+			<span>|</span>
+			<a href="https://github.com/fredlintz5/friend_finder" target="_blank">Github Repo</a>
+		</div>
+		<br>
+	</div>
+
+	<script type="text/javascript">
+		$('#submit').on('click', () => {
+
+			let name = $('#name').val().trim();
+			let imag = $('#image').val().trim();
+			let ans1 = $('#quest1').val().trim();
+			let ans2 = $('#quest2').val().trim();
+			let ans3 = $('#quest3').val().trim();
+			let ans4 = $('#quest4').val().trim();
+
+			if ((name || imag || ans1 || ans2 || ans3 || ans4) === "") {
+				alert("Please fill in all fields");	
+			} else {
+				let scoreArray = [ans1, ans2, ans3, ans4]
+
+				let newFriend = {
+					name: name,
+					image: imag,
+					scores: scoreArray
+				}
+				console.log(newFriend);
+
+				$('#name').val("");
+				$('#image').val("");
+				$('#quest1').val("");
+				$('#quest2').val("");
+				$('#quest3').val("");
+				$('#quest4').val("");
+			}
+		})
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
