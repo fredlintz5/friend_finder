@@ -1,21 +1,35 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const app = express();
 const path = require('path');
-const port = process.env.PORT || 8000;
+const app = express();
+const port = process.env.PORT || 3000;
+// const friends = require('./app/data/friends.js');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, '/app/public/home.html'));
-});
+require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 
-app.get('/survey', (req,res) => {
-	res.sendFile(path.join(__dirname, '/app/public/survey.html'));
-})
+
+// app.get('/', (req, res) => {
+// 	res.sendFile(path.join(__dirname, '/app/public/home.html'));
+// });
+
+// app.get('/survey', (req,res) => {
+// 	res.sendFile(path.join(__dirname, '/app/public/survey.html'));
+// })
+
+// app.get('/api/friends', (req, res) => {
+// 	res.json(friends);
+// })
+
+// app.post('/api/friends', (req, res) => {
+// 	let newFriend = req.body;
+// 	friends.push(newFriend);
+// })
 
 
 
