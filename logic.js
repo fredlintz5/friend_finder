@@ -15,7 +15,7 @@ $('#submit').on('click', () => {
 		let newUser = {
 			name: userName,
 			photo: imag,
-			scores: `${[ans1, ans2, ans3, ans4, ans5]}`
+			scores: [ans1, ans2, ans3, ans4, ans5]
 		};
 		console.log(newUser);
 
