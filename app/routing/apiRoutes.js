@@ -6,7 +6,6 @@ module.exports = (app) => {
 	})
 
 	app.post('/api/friends', (req, res) => {
-		let newFriend = req.body;
-		friends.push(newFriend);
+		friends.push(req.body);
 	})
 };

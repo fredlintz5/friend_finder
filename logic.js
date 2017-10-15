@@ -17,9 +17,8 @@ $('#submit').on('click', () => {
 			photo: imag,
 			scores: [ans1, ans2, ans3, ans4, ans5]
 		};
-		console.log(newUser);
 
-		$.post('/api/friends', newUser);
+		$.post({url: '/api/friends', contentType: 'application/json'}, JSON.stringify(newUser));
 		
 		$('#name').val("");
 		$('#image').val("");
@@ -31,9 +30,6 @@ $('#submit').on('click', () => {
 	}
 	findFriend();
 });
-
-
-
 
 
 function findFriend() {
