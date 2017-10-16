@@ -87,10 +87,3 @@ function calcScoreDiff(user, friend) {
 
 
 
-
-
-
-
-
-
-
