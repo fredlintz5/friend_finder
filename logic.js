@@ -15,7 +15,7 @@ $('#submit').on('click', () => {
 	let ans4 = $('#quest4').val().trim();
 	let ans5 = $('#quest5').val().trim();
 
-	if ((userName || imag || ans1 || ans2 || ans3 || ans4 || ans5) === "") {
+	if (userName === "" || imag === "" || ans1 === "" || ans2 === "" || ans3 === "" || ans4 === "" || ans5 === "") {
 		alert("Please fill in all fields");	
 	} else {
 		newUser = {
