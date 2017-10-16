@@ -8,7 +8,7 @@ let friends = [
       4,
       4,
       3
-    ]
+    ] 
 },
 {
   "name":"Steven Seagal",
@@ -46,7 +46,5 @@ let friends = [
 ];
 
 module.exports = friends;
-
-
 
 
