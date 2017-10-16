@@ -42,6 +42,28 @@ let friends = [
       5,
       4
     ]
+},
+{
+  "name":"Clint Eastwood",
+  "photo":"https://www.thesun.co.uk/wp-content/uploads/2017/06/nintchdbpict000190860133.jpg?strip=all&w=960",
+  "scores":[
+      2,
+      3,
+      4,
+      5,
+      1
+    ]
+},
+{
+  "name":"Dread Pirate Roberts",
+  "photo":"http://www.slate.com/content/dam/slate/blogs/moneybox/2013/11/06/silk_road_2_0_dread_pirate_roberts_is_resurrected/1383765045.png.CROP.promo-mediumlarge.png",
+  "scores":[
+      4,
+      2,
+      3,
+      1,
+      4
+    ]
 }
 ];
 
